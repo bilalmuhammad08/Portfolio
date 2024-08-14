@@ -253,6 +253,6 @@
 
 let sendMessage = document.getElementById('send_message')
 sendMessage.addEventListener("click", function(){
-  window.location.href = "https://wa.me/8921876193"
+  window.location.href = "https://wa.me/918921876193"
 })
 
