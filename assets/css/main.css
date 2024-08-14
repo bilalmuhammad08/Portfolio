@@ -1643,3 +1643,16 @@ section,
     margin-left: 0px;
   }
 }
+#send_message{
+  background: var(--accent-color);
+    width: 174px;
+    height: 68px;
+    border: 1px solid transparent;
+    border-radius: 36px;
+    color: white;
+    font-size: 18px;
+}
+.button_flex{
+  display: flex;
+  justify-content: center ;
+}
