@@ -1636,8 +1636,8 @@ section,
   margin-left: 445px;
 }
 @media screen and (max-width:400px){
-  .Humanities{
-    display: none !important;
+  .margin-left{
+   margin-left: 0px !important;
   }
   .padding-left{
     margin-left: 0px;
