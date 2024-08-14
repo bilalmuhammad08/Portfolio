@@ -1786,6 +1786,10 @@ ul h4 {
   .padding-left{
     margin-left: 0px;
   }
+  #dark-mode-toggle img{
+    margin: 0px !important;
+    width: 27px !important;
+  }
 }
 #check:checked ~ label i::before{
   content: "\e28f";
