@@ -256,3 +256,33 @@ sendMessage.addEventListener("click", function(){
   window.location.href = "https://wa.me/918921876193"
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('dark-mode-toggle');
+
+  // Check for saved user preference
+  if (localStorage.getItem('theme') === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+
+  toggleButton.addEventListener('click', () => {
+    // Toggle theme
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme); // Save preference
+  });
+});
+
+let darkMode = document.getElementById('dark')
+darkMode.onclick = function(){
+document.getElementById('white').style.display = 'block'
+document.getElementById('dark').style.display = 'none'
+}
+
+let whiteMode = document.getElementById('white')
+whiteMode.onclick = function(){
+  document.getElementById('dark').style.display = 'block'
+document.getElementById('white').style.display = 'none'
+}
+

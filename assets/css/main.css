@@ -453,7 +453,7 @@ h6 {
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
-  padding: 40px 0;
+  padding: 5px 0;
   position: relative;
 }
 
@@ -1655,4 +1655,167 @@ section,
 .button_flex{
   display: flex;
   justify-content: center ;
+}
+/* Default (light) mode styles */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000; /* Black text color for light mode */
+  --accent-color: #007bff;
+  --border-color: #e1e1e1;
+  --surface-color: #f8f9fa;
+  --contrast-color: #000000; /* Black contrast color for buttons, etc. */
+}
+
+/* Dark mode styles */
+[data-theme="dark"] {
+  --background-color: #000000;
+  --text-color: #ffffff; /* White text color for dark mode */
+  --accent-color: #ff5722;
+  --border-color: #555555;
+  --surface-color: #444444;
+  --contrast-color: #ffffff; /* White contrast color for buttons, etc. */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color); /* Applies white text color in dark mode */
+}
+
+/* General elements */
+header, footer {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+button, input[type="submit"] {
+  background-color: var(--accent-color);
+  color: var(--contrast-color); /* Ensures text on buttons is readable */
+}
+
+/* Paragraphs and emphasized text */
+p, em {
+  color: var(--text-color); /* Ensures paragraphs and emphasized text are white in dark mode */
+}
+
+/* Headings */
+h1, h2 {
+  color: var(--text-color); /* Ensures all headings are white in dark mode */
+}
+
+h3, h4, h5 {
+  color: var(--text-color); /* White color for h3, h4, and h5 */
+}
+
+/* List items */
+li {
+  color: var(--text-color); /* Ensures list items are white in dark mode */
+}
+
+/* Specific styles for headings inside ul */
+ul h4 {
+  color: var(--text-color); /* Ensures h4 inside ul is white in dark mode */
+}
+
+/* Additional styling for borders and surfaces */
+.border {
+  border-color: var(--border-color);
+}
+
+.card, .panel {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  color: var(--text-color); /* Ensures text color in cards and panels */
+}
+
+/* Custom components */
+.testimonials {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+
+.portfolio .portfolio-item {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+
+/* More component styling */
+.contact .info-wrap, .php-email-form {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+
+.faq .faq-container .faq-item {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+
+.portfolio-details .portfolio-description .testimonial-item {
+  background: var(--surface-color);
+  color: var(--text-color);
+  
+}
+.skill span, .skill i{
+  color: var(--text-color) !important;
+}
+.resume-item h4{
+  color: var(--accent-color) !important ;
+}
+.content p{
+  color: var(--text-color) !important;
+}
+.resume-title{
+  color: var(--text-color) !important;
+}
+/* Ensure responsiveness */
+@media (max-width: 575px) {
+  /* Your responsive styles here */
+}
+.header_name h2, .header_name p{
+  color: #ffffff !important;
+}
+@media screen and (max-width:770px){
+  .padding-left{
+    margin-left: 0px;
+  }
+}
+#check:checked ~ label i::before{
+  content: "\e28f";
+  font-size: 22px;
+}
+.ham-inp{
+  display: none;
+}
+#dark-mode-toggle{
+width: 30px;
+height: 30px;
+}
+#dark-mode-toggle img{
+  width: 30px;
+  margin: 8px 0px -19px 10px;
+  cursor: pointer;
+}
+.navmenu{
+  display: flex;
+}
+/* #white-mode-toggle img{
+  width: 30px;
+  margin: 0px 0px -19px 10px;
+}
+#white-mode-toggle{
+  width: 30px;
+  height: 30px;
+  display: none;
+} */
+
+#white{
+  display: none;
 }
